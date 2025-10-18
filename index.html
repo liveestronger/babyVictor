@@ -144,7 +144,7 @@
 
     <section class="card" id="rsvp">
       <div class="section-title">RSVP</div>
-      <form id="rsvp-form" method="POST">
+      <form id="rsvp-form" action="https://formspree.io/f/movkbael" method="POST">
         <label for="name">Full Name*</label>
         <input type="text" id="name" name="name" required />
 
@@ -235,13 +235,13 @@ ${eventBlock}`
         });
       }
 
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        if (successEl) successEl.style.display = 'block';
-        if (errorEl) errorEl.style.display = 'none';
+      //form.addEventListener('submit', function (e) {
+      //  e.preventDefault();
+      //  if (successEl) successEl.style.display = 'block';
+      //  if (errorEl) errorEl.style.display = 'none';
         // This demo uses the email fallback; integrate Formspree/Netlify for real submissions.
-        setTimeout(() => { if (successEl) successEl.style.display = 'none'; }, 5000);
-        form.reset();
+      //  setTimeout(() => { if (successEl) successEl.style.display = 'none'; }, 5000);
+      //  form.reset();
       });
     })();
   </script>
